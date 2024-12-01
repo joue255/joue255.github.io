@@ -1,6 +1,6 @@
 /*
 	Author: Joshua Ouellette
-	Date: 11/27/2024
+	Date: 11/30/2024
 	Filename: styles.css
 */
 
@@ -327,7 +327,7 @@ footer a:hover {
     }
 	
 	/* Dropdown Button Styling for tablet
-	DELETE AFTER FINALS */
+	DELETE AFTER FINALS 
 	.dropdown-menu {
 	visibility: hidden;
 	opacity: 0;
@@ -337,14 +337,14 @@ footer a:hover {
 	transition: opacity 1s ease, transform 1s ease, height 1s ease, visibility 0s ease 1s;
 	}
 	
-	/* When the dropdown is visible (when 'show' class is added) */
+	 When the dropdown is visible (when 'show' class is added) 
 	.dropdown-menu.show {
 	visibility: visible;
 	opacity: 1;
 	height: 1900px;
 	transform: translateY(0);
 	transition: opacity 1s ease, transform 1s ease, height 1s ease;
-	}
+	}*/
 	
 	/* Formatting for Google Maps Insert */
 	 iframe {
@@ -457,7 +457,7 @@ footer a:hover {
 	}
 	
 	/* Dropdown Button Styling for Desktop 
-	DELETE AFTER FINALS */
+	DELETE AFTER FINALS 
 	.dropdown-menu {
 	visibility: hidden;
 	opacity: 0;
@@ -467,14 +467,14 @@ footer a:hover {
 	transition: opacity 1s ease, transform 1s ease, height 1s ease, visibility 0s ease 1s;
 	}
 	
-	/* When the dropdown is visible (when 'show' class is added) */
+	 When the dropdown is visible (when 'show' class is added) 
 	.dropdown-menu.show {
 	visibility: visible;
 	opacity: 1;
 	height: 1800px;
 	transform: translateY(0);
 	transition: opacity 1s ease, transform 1s ease, height 1s ease;
-	}
+	}*/
 }
 
 /* Mobile View */
@@ -633,7 +633,7 @@ footer a:hover {
 	}
 	
 	/* Dropdown Button Styling for Mobile 
-	DELETE AFTER FINALS */
+	DELETE AFTER FINALS 
 	.dropdown-menu {
 	visibility: hidden;
 	opacity: 0;
@@ -644,18 +644,18 @@ footer a:hover {
 	}
 	
 	.dropdown-menu img {
-    width: 70%; /* Shrink images to 70% of their container width */
-    height: auto; /* Maintain aspect ratio */
+    width: 70%; /* Shrink images to 70% of their container width 
+    height: auto; /* Maintain aspect ratio 
 	}
 	
-	/* When the dropdown is visible (when 'show' class is added) */
+	/* When the dropdown is visible (when 'show' class is added) 
 	.dropdown-menu.show {
 	visibility: visible;
 	opacity: 1;
 	height: 1680px;
 	transform: translateY(0);
 	transition: opacity 1s ease, transform 1s ease, height 1s ease;
-	}
+	}*/
 	
 	/* Formatting for Google Maps Insert */
 	 iframe {
@@ -812,8 +812,9 @@ footer a:hover {
     border-radius: 8px;
 	}
 	
-	/* Dropdown Button Styling for Large Desktop 
-	DELETE AFTER FINALS */
+	/*
+	 Dropdown Button Styling for Large Desktop 
+	DELETE AFTER FINALS 
 	.dropdown-menu {
 	visibility: hidden;
 	opacity: 0;
@@ -823,12 +824,13 @@ footer a:hover {
 	transition: opacity 1s ease, transform 1s ease, height 1s ease, visibility 0s ease 1s;
 	}
 	
-	/* When the dropdown is visible (when 'show' class is added) */
+	 When the dropdown is visible (when 'show' class is added) 
 	.dropdown-menu.show {
 	visibility: visible;
 	opacity: 1;
 	height: 2560px;
 	transform: translateY(0);
 	transition: opacity 1s ease, transform 1s ease, height 1s ease;
-	}
+	} 
+	*/
 }
