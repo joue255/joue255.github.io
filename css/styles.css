@@ -1,0 +1,842 @@
+/*
+	Author: Joshua Ouellette
+	Date: 11/30/2024
+	Filename: styles.css
+*/
+
+/* CSS Reset */
+body, header, nav, main, footer, img, h1, h2, h3, figure, figcaption, thead, table, tr {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+/* Style rules for header */
+header {
+    width: 100%; 
+    min-height: 200px; /* Adjusted to fit design */
+    overflow: hidden; /* Hides overflow */
+	padding: 0;
+}
+
+/* Style rules for header image */
+header img {
+    width: 100%; /* Makes the image take the full width of the header */
+    height: auto; /* Maintains aspect ratio */
+    display: block; 
+}
+
+/* Styles and rules for body */
+body {
+	background-color: #f6eee4;
+	font-family: Arial, sans-serif; /* Font family with fallback */
+	color: #020202; 
+}
+
+/* Layout Grid Setup for Blog */
+.blog-layout {
+	display: grid; 
+	grid-template-columns: 1fr 3fr; /* Left sidebar 1 part, main content 3 parts, (add later:right sidebar 1 part) */
+	grid-template-areas:
+		"sidebar main"; /* Defines grid areas (add right-sidebar later)*/
+}   
+
+/* Styles for individual blog post sections */
+.blog-post {
+	grid-area: main;
+	max-width: 800px;
+	margin: 2em auto; /* Centers and adds space above/below */
+	padding: 1.5em;
+	background-color: #ffffff;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+	border-radius: 5px; /* Rounds corners */
+}
+/* Sidebar Styling */
+.blog-sidebar {
+	grid-area: sidebar;
+	background-color: #2a2314;
+	padding: 1em;
+}
+
+/* Style for Sidebar Dropdown */
+.blog-sidebar summary {
+    font-size: 1.3em; /* Larger text on tablets */
+    cursor: pointer;
+    padding: 0.6em;
+    color: white;
+}
+	
+	/* Style rules for sidebar links (left nav) */
+.blog-sidebar a {
+	font-size: 1.1em;
+	color: #f6eee4;
+	text-decoration: none;
+	display: block;
+	padding: 0.3em 0.8em;
+	border-radius: 5px;
+	transition: background-color 0.3s;
+}
+
+/* Hover FX for sidebar links */
+.blog-sidebar a:hover {
+	background-color: #60401f;
+	color: #fff;
+}
+
+/* Focus effect for sidebar links */
+.blog-sidebar a:focus {
+	background-color: #78593a;
+	color: #fff;
+}
+
+/* Right sidebar Styling (Future Use) */
+/*.right-sidebar {
+	display: none;
+	grid-area: right-sidebar;
+	background-color: #2a2314;
+	padding: 1em;
+} */
+
+/* Styles and rules for navigation */
+nav {
+	background-color: #2a2314; /* Dark background for contrast */
+	padding: 1em 0; /* Added padding for spacing */
+}
+
+/* Styles and rules for navigation unordered list. */
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	text-align: center; /* Center align the list */
+}
+
+/* Styles and rules for navigation list items */
+nav li {
+	display: inline; 
+	font-size: 1.5em;
+	font-family: Geneva, Arial, sans-serif; /* Font family with fallback */
+	font-weight: bold;
+}
+
+/* Styles and rules for navigation links */
+nav li a {
+	color: #f6eee4; 
+	padding: 0.5em 1em;
+	text-decoration: none; 
+	border-radius: 3px; /* Rounded corners */
+	transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
+}
+
+/* Hover effect on nav links */
+nav li a:hover {
+	background-color: #60401f; 
+	color: #fff; 
+}
+
+/* Style rules for main content */
+main {
+	padding: 2%;
+}
+
+/* Paragraphs in main content */
+main p {
+	font-size: 1.25em;
+	color: #4d3319; /* Accessible color contrast */
+}
+
+/* Main content unordered lists for future work */
+main ul {
+	list-style-type: square;
+}
+
+/* Link styles */
+.link {
+	color: #4d3319;
+	text-decoration: none;
+	font-weight: bold;
+	font-style: italic;
+}
+
+/* Action class styles */
+.action {
+	font-size: 1.75em;
+	font-weight: bold;
+	text-align: center;
+}
+
+/* Contact section using ID selector */
+#contact {
+	text-align: center;
+	padding: 1em 0;
+	color: #2a1f14;
+	background-color: #f6eee4;
+}
+
+/* Style rules for footer */
+footer {
+	text-align: center;
+	font-size: 0.85em;
+	background-color: #2a1f14;
+	color: #f6eee4;
+	padding: 1% 0;
+}
+
+/* Footer links */
+footer a {
+	color: #f3e6d8;
+	text-decoration: none;
+}
+
+/* Hover effect on footer links */
+footer a:hover {
+	color: #ffffff; 
+}
+
+/* Media Queries */
+
+/* Tablet View */
+@media (min-width: 768px) and (max-width: 1023px) {
+	
+	.logoheader {
+		display: none;
+	}
+	
+	/* Hides Experience Table for Tablet Viewport */
+	.experience-table {
+        display: none;
+    }
+	
+	/* Style for Sidebar Dropdown */
+    .blog-sidebar summary {
+        font-size: 1.3em; /* Larger text on tablets */
+        cursor: pointer;
+        padding: 0.6em;
+        color: #f6eee4;
+    }
+
+    .blog-sidebar ul ul {
+        margin-left: 1.2em; /* Adjusted indent for nested list */
+        padding: 0.6em 0;
+    }
+
+    .blog-sidebar a {
+        font-size: 1.2em; /* Slightly larger for tablet readability */
+    }
+	
+	.mobile {
+		display: none; /* hides mobile content */
+	}
+	
+	/* Shows tablet specific content */
+	.tab-desk {
+		display: block;
+	}
+	
+	/* Adjust nav items on tablet */
+    nav ul {
+        display: flex;
+        flex-direction: column; /* Stack items vertically on tablet */
+        align-items: center; /* Center items horizontally */
+        margin: 0;
+        padding: 0;
+    }
+
+    nav li {
+        display: block;
+        margin: 0.5em 0;
+        font-size: 1.5em; /* Larger font size for tablet */
+    }
+
+    nav li a {
+        text-decoration: none;
+        border-radius: 3px;
+        width: 100%;
+        text-align: center; /* Center the text */
+        font-size: 1.2em; /* Larger text for better readability */
+    }
+	
+	/* Card Style Rules */
+	.experience-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between cards */
+    margin: 20px;
+	}
+
+	.card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	}
+
+	.card h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+	}
+
+	.card p {
+    margin: 5px 0;
+    line-height: 1.5;
+    color: #333;
+	}
+	
+	
+	/* Tablet Queries for Music Page */
+	.music-posts {
+    width: 100%;
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+    justify-content: flex-start;
+	}
+	
+	.post {
+    background-color: #fff;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+	}
+	
+	.post h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+	}
+	
+	.post audio, .post video {
+    width: 100%;
+    border-radius: 8px;
+	}
+	
+	/* Style Rules for Forms */
+	
+	 form {
+        width: 80%; 
+        padding: 1.5em;
+    }
+
+    input, textarea {
+        width: 80%; 
+        margin-bottom: 1.2em;
+        padding: 1em;
+    }
+
+    button {
+        width: 80%; 
+        padding: 1.2em;
+        font-size: 1.3em;
+    }
+	
+	/* Dropdown Button Styling for tablet
+	DELETE AFTER FINALS */
+	.dropdown-menu {
+	visibility: hidden;
+	opacity: 0;
+	height: 0;
+	overflow: hidden;
+	transform: translateY(-20px);
+	transition: opacity 1s ease, transform 1s ease, height 1s ease, visibility 0s ease 1s;
+	}
+	
+	/* When the dropdown is visible (when 'show' class is added) */
+	.dropdown-menu.show {
+	visibility: visible;
+	opacity: 1;
+	height: 1900px;
+	transform: translateY(0);
+	transition: opacity 1s ease, transform 1s ease, height 1s ease;
+	}
+	
+	/* Formatting for Google Maps Insert */
+	 iframe {
+        width: 98%; /* Ensure iframe takes up full width of the parent container */
+        height: auto; /* Maintain the aspect ratio */
+        border: none; /* Remove any borders around the iframe */
+        display: block; /* Ensure the iframe is treated as a block-level element */
+    }
+}
+
+/* Desktop view */
+@media (min-width: 1024px) and (max-width: 1920px) {
+	
+	.logoheader {
+		display: none;
+	}
+	
+	/* Hides experience cards */
+	.experience-cards {
+		display: none;
+	}
+	
+	.mobile {
+		display: none;
+	}
+	
+	.tab-desk	{
+		display: block;
+	}
+	
+	.experience-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: 'Roboto', sans-serif;
+	}
+	
+	/* Experience Table Styling */
+	.experience-table th, .experience-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+	}	
+
+	.experience-table th {
+    background-color: #f2f2f2;
+	}
+
+	.experience-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+	}
+	
+	nav li a:focus {
+        background-color: #78593a; /* Change color when link is focused */
+        color: #ffffff; /* Ensure contrast with background */
+    }
+	
+	main {
+		padding: 5%; /*adds extra space */
+	}
+	
+	/* Style Rules for Forms */
+	
+	form {
+        width: 50%; 
+        padding: 2em;
+    }
+
+    input, textarea {
+        width: 100%; 
+        margin-bottom: 1.5em;
+        padding: 1.2em;
+    }
+
+    button {
+        width: auto; 
+        padding: 1.2em;
+        font-size: 1.5em;
+    }
+	
+	
+	/* Desktop Queries for Music Page */
+	.music-posts {
+    width: 90%;
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+    justify-content: flex-start;
+	}
+	
+	.post {
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+	}
+	
+	.post h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+	}
+	
+	.post audio, .post video {
+    width: 100%;
+    border-radius: 8px;
+	}
+	
+	/* Dropdown Button Styling for Desktop 
+	DELETE AFTER FINALS */
+	.dropdown-menu {
+	visibility: hidden;
+	opacity: 0;
+	height: 0;
+	overflow: hidden;
+	transform: translateY(-20px);
+	transition: opacity 1s ease, transform 1s ease, height 1s ease, visibility 0s ease 1s;
+	}
+	
+	/* When the dropdown is visible (when 'show' class is added) */
+	.dropdown-menu.show {
+	visibility: visible;
+	opacity: 1;
+	height: 1800px;
+	transform: translateY(0);
+	transition: opacity 1s ease, transform 1s ease, height 1s ease;
+	}
+}
+
+/* Mobile View */
+@media (min-width: 320px) and (max-width: 767px) {
+	
+	.imgheader {
+		display: none;
+	}
+	
+	.blog-post img {
+    max-width: 100%;  /* Make sure images don't overflow */
+    height: auto;     /* Maintain aspect ratio */
+    display: block;   /* Remove any unwanted space below the image */
+    margin: 0 auto;   /* Center images */
+	}
+	
+	/* Hide sidebar by default */
+	.blog-sidebar {
+		padding: 1.5em;
+	}
+	
+	/* Style for Sidebar Dropdown */
+    .blog-sidebar summary {
+        font-size: 1.1em; /* Slightly larger font */
+        cursor: pointer;
+        padding: 0.5em;
+        color: white; /* Sidebar text color */
+    }
+
+    .blog-sidebar ul ul {
+        margin-left: 1em; /* Indent for nested list */
+        padding: 0.5em 0;
+    }
+
+    .blog-sidebar a {
+        font-size: 1.1em; /* Larger text for easier touch navigation */
+    }
+	
+	/* Ensures the grid adapts properly to mobile */
+	.blog-layout {
+		display: block;
+		margin: 0;
+	}
+	
+	/* Mobile layout adjustments for main content */
+	main {
+		padding: 1em;
+	}
+	
+	 /* Adjust nav items on mobile */
+    nav ul {
+        display: flex ;
+        flex-direction: column; /* Stack items vertically on mobile */
+        align-items: center; /* Center items horizontally */
+        margin: 0;
+        padding: 0;
+    }
+
+    nav li {
+        display: block;
+		width: 100%;
+        margin: 0.5em 0;
+        font-size: 1.2em; /* Larger font size for mobile */
+    }
+
+    nav li a {
+		display: block; /* Make the link a block element */
+		width: 100%;
+		box-sizing: border-box; /* Ensures padding does not effect width */
+        padding: 1em;
+        text-decoration: none;
+        border-radius: 3px;
+        text-align: center;
+        font-size: 1.2em; /* Larger text for mobile */
+    }
+	
+	/* Card Style Rules */
+	.experience-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between cards */
+    margin: 20px;
+	}
+
+	.card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	}
+
+	.card h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+	}
+
+	.card p {
+    margin: 5px 0;
+    line-height: 1.5;
+    color: #333;
+	}
+	
+	/* Hides Experience Table for Mobile Viewport */
+	.experience-table {
+        display: none;
+    }
+	
+	/* Style Rules for Forms */
+	
+	form {
+        width: 90%; /* Full width for form fields on mobile */
+        padding: 1em;
+    }
+
+    input, textarea {
+        width: 90%; /* Full width for inputs and textareas */
+        margin-bottom: 1em;
+        padding: 0.8em;
+    }
+
+    button {
+        width: 90%; /* Full width for submit button */
+        padding: 1em;
+        font-size: 1.2em;
+    }
+	
+	/* Mobile Queries for Music Page */
+	.music-posts {
+    width: 100%;
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+    justify-content: flex-start;
+	}
+	
+	.post {
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+	}
+	
+	.post h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+	}
+	
+	.post audio, .post video {
+    width: 100%;
+    border-radius: 8px;
+	}
+	
+	/* Dropdown Button Styling for Mobile 
+	DELETE AFTER FINALS */
+	.dropdown-menu {
+	visibility: hidden;
+	opacity: 0;
+	height: 0;
+	overflow: hidden;
+	transform: translateY(-20px);
+	transition: opacity 1s ease, transform 1s ease, height 1s ease, visibility 0s ease 1s;
+	}
+	
+	.dropdown-menu img {
+    width: 70%; /* Shrink images to 70% of their container width */
+    height: auto; /* Maintain aspect ratio */
+	}
+	
+	/* When the dropdown is visible (when 'show' class is added) */
+	.dropdown-menu.show {
+	visibility: visible;
+	opacity: 1;
+	height: 1680px;
+	transform: translateY(0);
+	transition: opacity 1s ease, transform 1s ease, height 1s ease;
+	}
+	
+	/* Formatting for Google Maps Insert */
+	 iframe {
+        width: 98%; /* Ensure iframe takes up full width of the parent container */
+        height: auto; /* Maintain the aspect ratio */
+        border: none; /* Remove any borders around the iframe */
+        display: block; /* Ensure the iframe is treated as a block-level element */
+    }
+}	
+
+/* Large Desktop View */
+@media (min-width: 1921px) and (max-width: 8192px) {
+	
+	.logoheader {
+		display: none;
+	}
+	
+	/* Hides Mobile Experience Cards Layout */
+	.experience-cards {
+		display: none;
+	}
+	
+	.card {
+		display: none;
+	}
+	
+    .blog-layout {
+        grid-template-columns: 1fr 4fr; /* More space for the main content */
+    }
+
+    /* Main content adjustments for large desktop */
+    .blog-post {
+        max-width: 900px; /* Wider content area */
+        padding: 2em; /* Increased padding for better spacing */
+    }
+
+    /* Sidebar adjustments */
+    .blog-sidebar {
+        padding: 2em; /* More padding for larger sidebar */
+    }
+
+    /* Increase font size for readability */
+    .blog-sidebar a {
+        font-size: 1.3em; /* Larger font for sidebar links */
+    }
+	
+	/* Experience Table Styling */
+	.experience-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: 'Roboto', sans-serif;
+	}
+
+	.experience-table th, table.experience-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+	}	
+
+	.experience-table th {
+    background-color: #f2f2f2;
+	}
+
+	.experience-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+	}
+
+    main p {
+        font-size: 1.3em; /* Larger font for better legibility */
+    }
+
+    /* Adjust navigation menu for large desktops */
+    nav ul {
+        display: flex;
+        flex-direction: row; /* Horizontal layout for nav links */
+        justify-content: center; /* Centers nav items horizontally */
+    }
+
+    nav li {
+        margin: 0 2em; /* Space out nav items */
+        font-size: 1.8em; /* Larger font for better legibility on large screens */
+    }
+
+    nav li a {
+        font-size: 1.4em; /* Slightly larger links for readability */
+        padding: 1em 1.5em; /* Increase padding for easier clicks */
+    }
+	
+	
+	/* Style rules for Forms */
+	form {
+    width: 50%; /* Form takes up 50% of the container */
+    padding: 2em;
+    }
+
+    input, textarea {
+        width: 100%; /* Full width for inputs and textareas */
+        margin-bottom: 1.5em;
+        padding: 1.2em;
+    }
+
+    button {
+        width: auto; /* Button size depends on content */
+        padding: 1.2em;
+        font-size: 1.5em;
+    }
+
+	/* Style Rules for Forms */
+    form {
+        width: 40%; /* Form takes up 40% of the container for large desktop */
+        padding: 2.5em;
+    }
+
+    input, textarea {
+        width: 100%; /* Full width for inputs and textareas */
+        margin-bottom: 1.5em;
+        padding: 1.5em;
+    }
+
+    button {
+        width: auto; /* Button size depends on content */
+        padding: 1.5em;
+        font-size: 1.7em;
+    }
+	
+	/* Large Desktop Queries for Music Page */
+	.music-posts {
+    width: 100%;
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+    justify-content: flex-start;
+	}
+	
+	.post {
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+	}
+	
+	.post h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+	}
+	
+	.post audio, .post video {
+    width: 100%;
+    border-radius: 8px;
+	}
+	
+	/*
+	 Dropdown Button Styling for Large Desktop 
+	DELETE AFTER FINALS */
+	.dropdown-menu {
+	visibility: hidden;
+	opacity: 0;
+	height: 0;
+	overflow: hidden;
+	transform: translateY(-20px);
+	transition: opacity 1s ease, transform 1s ease, height 1s ease, visibility 0s ease 1s;
+	}
+	
+	/* When the dropdown is visible (when 'show' class is added) */
+	.dropdown-menu.show {
+	visibility: visible;
+	opacity: 1;
+	height: 2560px;
+	transform: translateY(0);
+	transition: opacity 1s ease, transform 1s ease, height 1s ease;
+	} 
+}

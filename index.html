@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<!--
+	Student Name: Joshua Ouellette
+	File Name: index.html
+	Date: 11/30/2024
+-->
+<html lang="en">
+<head>
+	<title>Home</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="This is the home page">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet"> <!-- Custom Google Font -->
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	
+	<header>
+	<!-- Placeholder header image -->
+		<div class="imgheader">
+		<figure>
+		<img src="images/top-placeholder.jpg" alt="piano keys closeup">
+		<!-- I had to put something, this is a personal blog style thing so there was no intention of anything 
+		like a tagline or mission statement. -->
+		<figcaption>Tagline? What Tagline?</figcaption>
+		</figure>
+		</div>
+		
+		<div class="logoheader">
+		<figure>
+		<img src="images/logo.png" alt="Logo I don't want">
+		<figcaption>Tagline? What Tagline?</figcaption>
+		</figure>
+		</div>
+	</header>
+	
+	<nav>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="music.html">Music</a></li> 
+			<li><a href="blog.html">Blog</a></li> 
+			<li><a href="collabs.html">Collaborations</a></li> 
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+	</nav>
+	
+	<main>
+		<h1 style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);">Welcome to my Home Page </h1>
+		
+		<p> My name is Josh, right now it's my college final but this will eventually be my personal website for mostly all of my music projects. 
+		But I also mess with computers, electronics, and anything I find interesting in the moment.</p>
+		
+		<h2>The Purpose of the site<h2>
+		<p>This basically doubles as an about section but in it's current state here and the website as a whole is a skeleton for whatever music content I create. 
+		A lot of choices were made for that purpose and that purpose alone. I shoehorned in some content, had some fun, and gave it some purpose beyond "just a grade". 
+		If you're one of my classmates reading this. I do want to state for the record: that it isn't a bad thing for creating your website for a grade and what I am doing 
+		is risky and stupid. If you're Professor Harkness, sorry for the headache. Normally your supposed to design it like some job resume or something more grounded. 
+		But if I am gonna spend all this time coding I might as well have some fun with it even if the choice is confusing to most.</p>
+		
+		<p>I don't really mind taking a small hit to the grade if it means that I had some fun learning a topic I don't normally like interacting with and despite
+		everything. I had quite a bit of fun creating this, though I do wish I had more time to finish at least one song to display on this site and am a little displeased
+		about shoehorning in a (lackluster) practice recording and a placeholder sfx for the music page. Though I did get to use the best collaborator ever for the collabs page, 
+		however unhuman they were.</p>
+		
+		<p>To anyone reading this, Be it professor or classmate. I hope you can appreciate the audacity of such an unconventional route for a college final.
+		But I promise, I mean no malice out of it. I just wanted to enjoy the process and learn, in which I sure did.</p>
+		
+		<p>For site content you can click on the nav links above. <b>Blog</b> to read what I am working on, <b>Music</b> for any music projects I upload, as of
+		right now it doesn't have much of anything, <b>Collaborations</b> for projects I may work on that involve help of other people, and the <b>Contact</b> 
+		to send a message if so desired. There is also a comments section strewn in their for anyone the webdev class to use.</p>
+		
+		
+		<!-- plan to remove this section -->
+		<section>
+			<h2>Portfolio Pieces</h2>
+			<div class="dropdown-container">
+			<!-- Dropdown Button -->
+			<button class="dropdown-btn">Portfolio Menu</button>
+
+			<!-- Dropdown Content -->
+			<ul class="dropdown-menu">
+				<li>
+				<p>I never really intended to have this functionality when planning the site. Makes me wish
+				I documented all my projects but I assume I just have to show I know how to do it sooo.</p>
+				<h2>Disclaimer: Repairing a CRT monitor or TV is extremely dangerous due to the high voltage inside, even when the monitor or TV is turned off. Additionally, the glass tube can implode if mishandled, causing serious injury. Handle with utmost caution and only attempt repairs if you are experienced and aware of the risks.</h2>
+				<img src="images/1978-crt.jpg" alt="1978 Capri Branded Color TV">
+				<p>Here is a CRT Television I recently Restored, got Atari Pitfall displaying on it in this image.
+				From the dinosaur era without TV remotes for TV's. The Tube surprisingly has a lot of life in it and
+				though it looks like there are image alignment issues. There is none, I guess this TV just hates Atari
+				because it looks fine on the Sega Genesis.</p>
+				<img src="images/1978-crt2.jpg" alt="1978 TV showing Sega Genesis Game">
+				<p> I thought the lights off might help with this picture, it didn't but anyhow.
+				Not much work needed to be done, a full capacitor replacement and dusting. I took an image before
+				I finished cleaning and recapping and this is what it looked like while I was working on it. I did a light
+				clean at the time but didn't fully clean the inside yet. Also I don't feel like tearing off the back to take 
+				another picture so this is all you get.</p>
+				<img src="images/innards.jpg" alt="1978 TV internal components">
+				<p> Glad to see this thing working, too bad this thing will eventually stop working... forever. But I will
+				enjoy it while I can.</p>
+				</li>
+			</ul>
+			</div>
+		</section>
+		
+		<section>
+			<h2 style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);"> Experience Levels </h2>
+			<p> I have to put a table in here and thought it might be fun to do one showing various 
+			skills I have aquired, my experience level, and my reasoning for putting my experience level 
+			where it is. Mobile users sorry, you have to deal with a list. Though it was recommended by my professor to do experience levels, I think he
+			meant strictly computer related but I will add on to it.</p>
+		</section>
+			  
+			  <!-- Table of Experience Levels, Desktop only -->
+		<section class="experience-table">
+			<h2>Experience Levels</h2>
+			  <table>
+				<thead>
+						<!-- Table Header -->
+					<tr>
+						<th>Category</th>
+						<th>Skill</th>
+						<th>Experience Level</th>
+						<th>Reasoning</th>
+					</tr>
+				</thead>
+					<tbody>
+						<tr>
+							<td>Technology</td>
+							<td>Hardware Repair</td>
+							<td>Advanced</td>
+							<td>I can work on are broad range hardware, Computers (of any kind), and CRT Displays are some examples.</td>
+						</tr>
+						<tr>
+							<td>Technology</td>
+							<td>Computer Networks</td>
+							<td>Beginner</td>
+							<td>I am no expert with computer networks but can feel my way around fairly easily, I think the rest will come with time. Still got a ways to go.</td>
+						</tr>
+						<tr>
+							<td>Technology</td>
+							<td>Programming</td>
+							<td>Intermediate</td>
+							<td>Programming is more about knowing how to use syntax functions to achieve a desire result. Though I usually avoid progamming when possible!</td>
+						</tr>
+						<tr>
+							<td>Music</td>
+							<td>Bass Guitar</td>
+							<td>Advanced</td>
+							<td>Been playing the longest and come comfortably spit out basslines.</td>
+						</tr>
+						<tr>
+							<td>Music</td>
+							<td>Electric Guitar</td>
+							<td>Intermediate</td>
+							<td>Though skills from Bass transfer over, two different skill sets and I got a ways to go.</td>
+						</tr>
+						<tr>
+							<td>Music</td>
+							<td>Keyboards</td>
+							<td>Beginner</td>
+							<td>I am still working on this skill. I feel comfortable with it but hesitant to say I am any more than beginner.</td>
+						</tr>
+						<tr>
+							<td>Music</td>
+							<td>Drums</td>
+							<td>Beginner</td>
+							<td>Just started, no further comments.</td>
+						</tr>
+					</tbody>
+			</table>
+			</section>
+			<section class="experience-cards">
+				<div class="card">
+					<h3>Technology - Hardware Repair</h3>
+					<p><strong>Experience Level:</strong> Advanced</p>
+					<p><strong>Reasoning:</strong> I can work on are broad range hardware, Computers (of any kind), and CRT Displays are some examples.</p>
+				</div>
+				<div class="card">
+					<h3>Technology - Computer Networks</h3>
+					<p><strong>Experience Level:</strong> Beginner</p>
+					<p><strong>Reasoning:</strong> I am no expert with computer networks but can feel my way around fairly easily. I think the rest will come with time. Still got a ways to go.</p>
+				</div>
+				<div class="card">
+					<h3>Technology - Programming</h3>
+					<p><strong>Experience Level:</strong> Intermediate</p>
+					<p><strong>Reasoning:</strong> Programming is more about knowing how to use syntax functions to achieve a desire result. Though I usually avoid progamming when possible!</p>
+				</div>
+				<div class="card">
+					<h3>Music - Bass Guitar</h3>
+					<p><strong>Experience Level:</strong> Advanced</p>
+					<p><strong>Reasoning:</strong> Been playing the longest and can comfortably spit out basslines.</p>
+				</div>
+				<div class="card">
+					<h3>Music - Electric Guitar</h3>
+					<p><strong>Experience Level:</strong> Intermediate</p>
+					<p><strong>Reasoning:</strong> Though skills from bass transfer over, they are two different skill sets, and I still have a ways to go.</p>
+				</div>
+				<div class="card">
+					<h3>Music - Keyboards</h3>
+					<p><strong>Experience Level:</strong> Beginner</p>
+					<p><strong>Reasoning:</strong> I am still working on this skill. I feel comfortable with it but hesitant to say I am more than a beginner.</p>
+				</div>
+				<div class="card">
+					<h3>Music - Drums</h3>
+					<p><strong>Experience Level:</strong> Beginner</p>
+					<p><strong>Reasoning:</strong> Just started; no further comments.</p>
+				</div>
+			</section>
+			
+	</main>
+	
+	<footer>
+		<p>&copy; Copyright 2024</p>
+			<a href="https://www.instagram.com" target="_blank">
+				<img src="images/insta-logo.png" alt="Instagram">
+			</a>
+			<a href="https://www.soundcloud.com" target="_blank">
+				<img src="images/soundcloud.jpg" alt="Soundcloud">
+			</a>
+	</footer>
+		<script src="js/portfolio.js"></script>
+</body>
+</html>
+	

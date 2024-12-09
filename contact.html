@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--
+	Student Name: Joshua Ouellette
+	File Name: contact.html
+	Date: 11/30/2024
+-->
+<html lang="en">
+<head>
+	<title>Contact</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="This is the contact page to find contact info.">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet"> <!-- Custom Google Font -->
+	<link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+	
+	<header>
+	<!-- Placeholder header image -->
+		<div class="imgheader">
+		<figure>
+		<img src="images/top-placeholder.jpg" alt="piano keys closeup">
+		<!-- I had to put something, this is a personal blog style thing so there was no intention of anything 
+		like a tagline or mission statement. -->
+		<figcaption>Tagline? What Tagline?</figcaption>
+		</figure>
+		</div>
+		
+		<div class="logoheader">
+		<figure>
+		<img src="images/logo.png" alt="Logo I don't want">
+		<figcaption>Tagline? What Tagline?</figcaption>
+		</figure>
+		</div>
+	</header>
+	
+	<nav>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="music.html">Music</a></li> 
+			<li><a href="blog.html">Blog</a></li> 
+			<li><a href="collabs.html">Collaborations</a></li> 
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+	</nav>
+	
+	<main>
+		
+		<h3>Leave any Feedback below</h3>
+		
+		<script defer src="https://cdn.commento.io/js/commento.js"></script>
+		<div id="commento"></div>
+		
+		<script>
+			window.commento = window.commento || {
+			site: 'joue255'
+			};
+		</script>
+		
+		
+		<!-- Contact Form -->
+		<p>If for any reason you want to contact me in regards to anything I do here, feel free to submit a message below.</p>
+	
+			<h3>Submit Your Questions or Feedback</h3>
+			<form action="mailto:sJoshuaOuellette2@yccc.edu" method="POST" enctype="text/plain">
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name" required>
+
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" required>
+				
+				
+				<label for="topic">Topic:</label>
+				<select id="topic" name="topic">
+					<option value="general">General Inquiry</option>
+					<option value="collaboration">Collaboration</option>
+					<option value="music">Music-related</option>
+					<option value="feedback">Feedback</option>
+				</select>	
+				
+				<label for="question">Your Question:</label>
+				<textarea id="question" name="question" rows="4" required></textarea>
+
+				<button type="submit">Submit</button>
+			</form>
+			<!-- End of Contact Form -->
+	
+		<div id="contact">
+			<h2>Contact</h2>
+			<p class="tel-link round">
+				<a href="tel:2071112233" class="link">(207) 111-2233</a>
+			</p>
+			<p>Address: 112 College Dr, Wells, ME 04090</p>
+			<p>Email: <a href="mailto:sJoshuaOuellette2@yccc.edu">sJoshuaOuellette2@yccc.edu</a></p>
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92832.13864072567!2d-70.72659086077954!3d43.3560199723293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e2a83e1569b925%3A0x495ca36fb5e601fa!2sYork%20County%20Community%20College!5e0!3m2!1sen!2sus!4v1726421826071!5m2!1sen!2sus" 
+	width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		</div>		
+	</main>
+	
+	<footer>
+		<p>&copy; Copyright 2024</p>
+			<a href="https://www.instagram.com" target="_blank">
+				<img src="images/insta-logo.png" alt="Instagram">
+			</a>
+			<a href="https://www.soundcloud.com" target="_blank">
+				<img src="images/soundcloud.jpg" alt="Soundcloud">
+			</a>
+	</footer>
+
+</body>
+</html>
+	
